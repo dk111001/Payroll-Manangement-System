@@ -1,0 +1,10 @@
+#user1{
+    height: 80px;
+    width: 250px;
+    background-color: red;
+    font-style: italic;
+}
+
+.body{
+    background-color: black ;
+}

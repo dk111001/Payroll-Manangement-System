@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="/css/emp.css">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary user">
+   
+  
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item listi">
+          <a class="nav-link linkl" href="/admin/home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item listi">
+          <a class="nav-link linkl" href="/admin/employees">Employees</a>
+        </li>
+        <li class="nav-item listi">
+          <a class="nav-link linkl" href="/admin/transactions">Transactions</a>
+        </li>
+        <li class="nav-item listi">
+          <a class="nav-link linkl" href="/admin/history">History</a>
+        </li>
+        <li class="nav-item active listi">
+          <a class="nav-link linkl" href="/admin/attendence">Attendence</a>
+        </li>
+        <li class="nav-item listi">
+          <a class="nav-link linkl" href="/">Sign out</a>
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+
+  <div class="row mt-5">
+    <div class="col-md-6 m-auto ">
+      <div class="card card-body form-login">
+        <h1 class="text-center mb-3">
+          <i class="fas fa-user-plus"></i> Add Leaves
+        </h1>
+        <form action="/admin/attendence" method="POST">
+        <div>
+          
+        </div>  
+          <div class="form-group">
+              <label for="eid">Employee Id</label>
+              <input
+                type="number"
+                id="eid"
+                name="eid"
+                class="form-control"
+                placeholder="Enter Employee Id"
+                value="<%= typeof email != 'undefined' ? email : '' %>"
+              />
+            </div>
+            
+                  <div class="form-group">
+                      <label for="month">Month</label>
+                      <input
+                        type="month"
+                        id="month"
+                        name="month"
+                        class="form-control"
+                        placeholder="Enter Month"
+                        value="<%= typeof name != 'undefined' ? name : '' %>"
+                        required
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="leave">No of Leaves</label>
+                        <input
+                          type="number"
+                          id="leave"
+                          name="leave"
+                          class="form-control"
+                          placeholder="Enter No of Leave"
+                          value="<%= typeof name != 'undefined' ? name : '' %>"
+                          required
+                          />
+                      </div>           
+          
+          <button type="submit" class="btn btn-primary btn-block">
+            Add
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>

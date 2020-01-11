@@ -1,0 +1,98 @@
+<link rel="stylesheet" href="/css/usersal.css">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary user">
+   
+  
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item listi">
+            <%if(list.view==0){%>
+          <a class="nav-link linkl" href="/user/home">Home <span class="sr-only">(current)</span></a>
+          <%}else{%>
+            <a class="nav-link linkl" href="/admin/view/home">Home <span class="sr-only">(current)</span></a>
+            <%}%>
+        </li>
+        <li class="nav-item active listi">
+            <%if(list.view==0){%>
+              <a class="nav-link linkl" href="/user/salary">Salary</a>
+              <%}else{%>
+                <a class="nav-link linkl" href="/admin/view/salary">Salary</a>
+              <%}%>
+        </li>
+        <li class="nav-item listi">
+            <%if(list.view==0){%>
+              <a class="nav-link linkl" href="/user/payment">Payment History</a>
+              <%}else{%>
+                <a class="nav-link linkl" href="/admin/view/payment">Payment History</a>
+              <%}%>
+        </li>
+        <li class="nav-item listi">
+          <%if(list.view==0){%>
+          <a class="nav-link linkl" href="/user/attendence">Attendence</a>
+          <%}else{%>
+            <a class="nav-link linkl" href="/admin/view/attendence">Attendence</a>
+          <%}%>
+        </li>
+        <li class="nav-item listi listll">
+          <%if(list.view==0){%>
+          <a class="nav-link linkl" href="/">Sign Out</a>
+          <%}else{%>
+            <a class="nav-link linkl" href="/admin/employees">Back</a>
+          <%}%>  
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+
+
+<div class = "emp">
+    <h1>
+        Salary Details
+    </h1>
+</div>
+<%let earn = {'base':"Base",'da':"DA",'hra':"HRA",'ma':"MA"}%>
+<div class="jumbotron jumboo1">
+    <h1>Earnings</h1>
+    <table class="table table-hover tableo">
+        <% for( let i in earn){%>
+          <tr>
+            <td class = 'tablei tablej' scope="row"><%=earn[i]%>:</th>
+            <td class = 'tablei'><%=salary[i]%></td>
+          </tr>
+        <%}%> 
+        <tr>
+            <th class = 'tablei tablej' scope="row">Total:</th>
+            <td class = 'tablei'><%=salary['total']%></td>
+          </tr> 
+          
+        
+          </tbody>
+     </table>
+       
+    
+
+</div>
+<%let ded = {'tax':"Tax",'pf':"Provident Fund",'wf':"Welfare Fund",'loan':"Loan",'bus':"Hostel/Bus Charges"}%>
+<div class="jumbotron jumboo2">
+        <h1>Deductions</h1>
+        <table class="table table-hover tableo">
+            <tbody>
+                <% for( let i in ded){%>
+                    <tr>
+                      <td class = 'tablei tablej' scope="row"><%=ded[i]%>:</th>
+                      <td class = 'tablei'><%=deduct[i]%></td>
+                    </tr>
+                  <%}%> 
+                  <tr>
+                      <th class = 'tablei tablej' scope="row">Total:</th>
+                      <td class = 'tablei'><%=deduct['total']%></td>
+                    </tr>  
+              </tbody>
+         </table>
+    </div>
+
+
+
+
+
+

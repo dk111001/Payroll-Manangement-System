@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="/css/emp.css">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary user">
+   
+  
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item listi">
+          <a class="nav-link linkl" href="/admin/home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active listi">
+          <a class="nav-link linkl" href="/admin/employees">Employees</a>
+        </li>
+        <li class="nav-item listi">
+          <a class="nav-link linkl" href="/admin/transactions">Transactions</a>
+        </li>
+        <li class="nav-item listi">
+          <a class="nav-link linkl" href="/admin/history">History</a>
+        </li>
+        <li class="nav-item listi">
+          <a class="nav-link linkl" href="/admin/attendence">Attendence</a>
+        </li>
+        <li class="nav-item listi">
+          <a class="nav-link linkl" href="/">Sign out</a>
+        </li>
+        
+        
+      </ul>
+      
+    </div>
+  </nav>
+
+
+  <div class = "emp">
+    <h1>
+      Employees
+    </h1>
+  </div>
+
+  <table class="table table-hover tableo">
+    <thead>
+      <tr>
+        <th class = "ent1" scope="col">Eid</th>
+        <th class = "ent1" scope="col">Name</th>
+        <th class = "ent1" scope="col">Department</th>
+        <th class = "ent1" scope="col">Designation</th>
+        <th class = "ent1" scope="col"></th>
+        <th class = "ent1" scope="col"></th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <% let det = ['R&D','Production','Marketing','Human Resource','Finance and Accounting'] %>
+      <%for(let i =0;i<emp.length;i++){%>
+      <tr class="table-secondary">
+        <th class = "ent" scope="row"><%=emp[i].eid%></th>
+        <td class = "ent"><%=emp[i].name%></td>
+        <td class = "ent"><%=det[emp[i].dno-1]%></td>
+        <td class = "ent"><%=emp[i].designation%></td>
+        <% let v = {id:emp[i]._id,sid:emp[i].sid,did:emp[i].did}%>
+        <td class = "ent"><a href="view/?id=<%=emp[i].eid%>">view</a>
+        </td>
+        
+        <td class = "ent"><a href="/delete/?id=<%=emp[i]._id%>">delete</a> </td>
+        
+      </tr>
+      <%}%>
+      
+    
+    </tbody>
+  </table> 

@@ -1,0 +1,62 @@
+.listi{
+    display: inline-block;
+    margin-left: 45px;
+}
+
+.user{
+    height: 50px;
+}
+
+.body{
+    background-color: black ;
+}
+
+.linkl{
+    font-size: 25px;
+}
+
+.cardi{
+    width: 290px;   
+}
+
+.tablei{
+    font-size: 30px;
+}
+.tablej{
+    text-align: right;
+    width: 31%;
+}
+.tableo{
+    width: 100%;
+}
+
+.jumboo1{
+    display: inline-block;
+    width: 49.4%;
+    margin-left: 10px;
+    height: 48%;
+
+}
+.jumboo2{
+    display: inline-block;
+    width: 49.4%;
+}
+
+.emp{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.linkll{
+    display: inline-block;
+    margin-left: 10px;
+}
+.ent1{
+    font-size: 26px;
+    width: 10%;
+}
+
+.ent{
+    font-size: 19px;
+}

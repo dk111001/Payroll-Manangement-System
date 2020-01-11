@@ -1,0 +1,84 @@
+<link rel="stylesheet" href="/css/user.css">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary user">
+   
+  
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item listi">
+            <%if(list.view==0){%>
+              <a class="nav-link linkl" href="/user/home">Home <span class="sr-only">(current)</span></a>
+              <%}else{%>
+                <a class="nav-link linkl" href="/admin/view/home">Home <span class="sr-only">(current)</span></a>
+                <%}%>
+        </li>
+        <li class="nav-item listi">
+            <%if(list.view==0){%>
+              <a class="nav-link linkl" href="/user/salary">Salary</a>
+              <%}else{%>
+                <a class="nav-link linkl" href="/admin/view/salary">Salary</a>
+              <%}%>
+        </li>
+        <li class="nav-item active listi">
+            <%if(list.view==0){%>
+              <a class="nav-link linkl" href="/user/payment">Payment History</a>
+              <%}else{%>
+                <a class="nav-link linkl" href="/admin/view/payment">Payment History</a>
+              <%}%>
+        </li>
+        <li class="nav-item listi">
+          <%if(list.view==0){%>
+          <a class="nav-link linkl" href="/user/attendence">Attendence</a>
+          <%}else{%>
+            <a class="nav-link linkl" href="/admin/view/attendence">Attendence</a>
+          <%}%>
+        </li>
+        <li class="nav-item listi listll">
+          <%if(list.view==0){%>
+          <a class="nav-link linkl" href="/">Sign Out</a>
+          <%}else{%>
+            <a class="nav-link linkl" href="/admin/employees">Back</a>
+          <%}%>  
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+
+  <div class = "emp">
+    <h1>
+      Payment History
+    </h1>
+  </div>
+  <table class="table table-hover tableo">
+    <thead>
+      <tr>
+        <th class = "ent1" scope="col">TId</th>
+        <th class = "ent1" scope="col">EId</th>
+        <th class = "ent1" scope="col">Amount</th>
+        <th class = "ent1" scope="col">Month</th>
+        <%if(list.view==0){%>
+        <th class = "ent1" scope="col">Pay-Slip</th>
+        <%}%>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <% let det = ['R&D','Production','Marketing','Human Resource','Finance and Accounting'] %>
+      <%for(let i =0;i<emp.length;i++){%>
+      <tr class="table-secondary">
+        <th class = "ent" scope="row"><%=emp[i].tid%></th>
+        <td class = "ent"><%=emp[i].eid%></td>
+        <td class = "ent"><%=emp[i].amount%></td>
+        <td class = "ent"><%=emp[i].month%></td>
+        <%if(list.view==0){%>
+        <td class = "ent"><a href="/user/pay_slip/?id=<%=emp[i].tid%>">Print</a></td>
+        <%}%>
+      </tr>
+      <%}%>
+      
+    
+    </tbody>
+  </table> 
+
+
+

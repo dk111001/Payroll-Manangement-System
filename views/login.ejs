@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="css/home.css">
+<div class="row mt-5">
+    
+    <div class="col-md-6 m-auto main_sec">
+      <h1 class="head_first"><i class="fab fa-amazon-pay"></i>&nbsp; Manager</h1>
+      <div class="card card-body form_login">
+        <h1 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i>  Login</h1>
+        
+        <form action="/users/login" method="POST">
+          <div class="form-group">
+            
+            <input
+              type="text"
+              id="username"
+              name="username"
+              class="form-control"
+              placeholder="Enter User Name"
+            >
+          </div>
+          <div class="form-group">
+            
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-control"
+              placeholder="Enter Password"
+            >
+          </div>
+          <button type="submit" class="btn btn-primary btn-block btn-submit">Admin</button>
+          <button type="submit" class="btn btn-primary  btn-submit">Employee</button>
+        </form>
+        
+      </div>
+    </div>
+  </div>

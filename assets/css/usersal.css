@@ -1,0 +1,50 @@
+.listi{
+    display: inline-block;
+    margin-left: 45px;
+}
+
+.user{
+    height: 50px;
+}
+
+.body{
+    background-color: black ;
+}
+
+.linkl{
+    font-size: 25px;
+}
+
+.cardi{
+    width: 290px;   
+}
+
+.tablei{
+    font-size: 30px;
+}
+.tablej{
+    text-align: right;
+    width: 31%;
+}
+.tableo{
+    width: 100%;
+}
+
+.jumboo1{
+    display: inline-block;
+    width: 49.4%;
+    margin-left: 10px;
+    height: 57%;
+
+}
+.jumboo2{
+    display: inline-block;
+    width: 49.4%;
+    height: 57%;
+}
+
+.emp{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}

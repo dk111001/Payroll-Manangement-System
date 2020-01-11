@@ -1,0 +1,41 @@
+.listi{
+    display: inline-block;
+    margin-left: 45px;
+}
+
+.user{
+    height: 50px;
+}
+
+.body{
+    background-color: black ;
+}
+.main_sec{
+    text-align: center;
+}
+.linkl{
+    font-size: 25px;
+}
+.tableo{
+    margin-top: 50px;
+}
+
+.ent1{
+    font-size: 26px;
+    width: 10%;
+}
+
+.ent{
+    font-size: 19px;
+}
+
+.form-login{
+    margin: auto;
+    width: 55%;
+}
+
+.emp{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
